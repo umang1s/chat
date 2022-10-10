@@ -2,16 +2,23 @@ package com.example.realtimechat.chat.model;
 
 public class Chat {
     private String message;
-    private int timestamp;
+    private long timestamp;
     private String sender;
     private String name;
     private String receiver;
-    public Chat(String message, int timestamp, String sender, String name, String receiver) {
+    public Chat(String message, long timestamp, String sender, String name, String receiver) {
         this.message = message;
         this.timestamp = timestamp;
         this.sender = sender;
         this.name = name;
         this.receiver = receiver;
+    }
+    public Chat(){
+        this.message="null";
+        this.timestamp = 0;
+        this.sender = "null";
+        this.name = "null";
+        this.receiver = "null";
     }
     public String getName() {
         return name;
@@ -25,10 +32,10 @@ public class Chat {
     public void setMessage(String message) {
         this.message = message;
     }
-    public int getTimestamp() {
+    public long getTimestamp() {
         return timestamp;
     }
-    public void setTimestamp(int timestamp) {
+    public void setTimestamp(long timestamp) {
         this.timestamp = timestamp;
     }
     public String getSender() {
@@ -43,6 +50,7 @@ public class Chat {
     public void setReceiver(String receiver) {
         this.receiver = receiver;
     }
+
 
 
 }

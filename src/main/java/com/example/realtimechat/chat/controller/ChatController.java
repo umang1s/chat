@@ -14,15 +14,13 @@ public class ChatController {
     @SendTo("/receive/chat")
     public Chat getChats(@RequestBody Chat chat){
         try{
-            Thread.sleep(1000);
+            Thread.sleep(100);
             System.out.println(chat);
-            System.out.println("*************MSG********************");
 
         }catch(InterruptedException e){
             e.printStackTrace();
         }
-        Chat temp=new Chat("Message", 12345, "I", "U", "Y");
-        return temp;
+        return chat;
     }
 }
 
