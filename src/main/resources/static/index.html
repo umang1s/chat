@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Real time Chat</title>
+</head>
+
+<body class="bg-dark">
+
+    <!-- Login Page  -->
+    <div class="bg-primary d-flex align-items-center" id="name-form">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <div class="input-group">
+                        <input type="text" id="name-field" placeholder="Enter you Name" autofocus
+                            class="form-control">
+                        <div class="input-group-append">
+                            <button class="btn btn-dark" id="login"> Enter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat page -->
+    <div class="d-none" id="chat-page">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="offset-md-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <div class="input-group">
+                                <input type="text" id="chat-field" placeholder="Enter Message" autofocus
+                                    class="form-control">
+                                <div class="input-group-append">
+                                    <button class="btn btn-dark" id="send"> Send</button>
+                                    <button class="btn btn-dark" id="logout"> Logout</button>
+                                </div>
+                            </div>
+
+
+                            <div class="table-responsive">
+                                <table id="chat-table-container">
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="/webjars/jquery/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+<script src="script.js"></script>
+
+</html>
